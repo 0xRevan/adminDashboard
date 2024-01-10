@@ -1,58 +1,120 @@
-/* Global Styles */
+/* Resetting default margins and paddings */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Styling the body for full height and a basic font */
 body {
-    display: grid;
-    grid-template-areas:
-        "banner banner"
-        "main-board sidebar"
-        "footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr 300px;
+    font-family: Arial, sans-serif;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Banner Section */
 .banner {
-    grid-area: banner;
-    height: 72px;
-    background: darkmagenta;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkmagenta;
     color: white;
+    padding: 10px;
 }
 
+.profile-section .profile-icon {
+    height: 50px; /* Adjust as needed */
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.connect-metamask button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Main Board Section */
 .main-board {
-    grid-area: main-board;
+    flex-grow: 1;
     padding: 20px;
 }
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
 }
 
 .card {
-    border: 1px solid #eee;
-    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
-    border-radius: 4px;
-    padding: 10px;
+    height: 150px; /* Adjust as needed */
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.sidebar {
-    grid-area: sidebar;
-    background: royalblue;
-    box-sizing: border-box;
+/* Cryptocurrency Prices */
+.crypto-prices {
+    width: 200px; /* Adjust as needed */
     padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
 }
 
-.footer {
-    grid-area: footer;
-    height: 72px;
-    background: #eee;
-    color: darkmagenta;
+/* Sidebar Section */
+.sidebar {
+    width: 250px; /* Adjust as needed */
+    background-color: royalblue;
+    color: white;
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar-top .sidebar-icon {
+    height: 50px; /* Adjust as needed */
+}
+
+.sidebar-nav {
+    list-style-type: none;
+}
+
+.sidebar-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.sidebar-bottom a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #eee;
+    color: darkmagenta;
+    text-align: center;
+    padding: 20px;
 }
