@@ -1,39 +1,58 @@
-/* reset */
+/* Global Styles */
 * {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
+}
 
+body {
+    display: grid;
+    grid-template-areas:
+        "banner banner"
+        "main-board sidebar"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 300px;
+    height: 100vh;
 }
 
 .banner {
+    grid-area: banner;
     height: 72px;
     background: darkmagenta;
     color: white;
 }
 
+.main-board {
+    grid-area: main-board;
+    padding: 20px;
+}
+
 .card-container {
     display: grid;
-    grid-template-columns: 75px 75px 75px;
-    grid-template-rows: 75px 75px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 32px;
-  }
+}
 
-  .card {
+.card {
     border: 1px solid #eee;
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
     border-radius: 4px;
-  }
+    padding: 10px;
+}
 
-  .sidebar {
-    width: 300px;
+.sidebar {
+    grid-area: sidebar;
     background: royalblue;
     box-sizing: border-box;
+    padding: 20px;
+}
 
-  }
-
-  .footer {
+.footer {
+    grid-area: footer;
     height: 72px;
     background: #eee;
     color: darkmagenta;
-
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
