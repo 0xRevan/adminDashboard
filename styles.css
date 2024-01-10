@@ -1,0 +1,39 @@
+/* reset */
+* {
+padding: 0;
+margin: 0;
+
+}
+
+.banner {
+    height: 72px;
+    background: darkmagenta;
+    color: white;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 75px 75px;
+    gap: 32px;
+  }
+
+  .card {
+    border: 1px solid #eee;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;
+  }
+
+  .sidebar {
+    width: 300px;
+    background: royalblue;
+    box-sizing: border-box;
+
+  }
+
+  .footer {
+    height: 72px;
+    background: #eee;
+    color: darkmagenta;
+
+  }
